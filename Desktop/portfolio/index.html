@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Praveen Banki</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#0b0f1a,#111a2e);
+color:white;
+}
+
+/* navbar */
+
+nav{
+
+position:fixed;
+
+width:100%;
+
+background:rgba(0,0,0,.7);
+
+backdrop-filter:blur(10px);
+
+padding:14px;
+
+text-align:center;
+
+z-index:1000;
+
+}
+
+nav a{
+
+color:white;
+
+margin:10px;
+
+font-size:14px;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#4fc3f7;
+
+}
+
+/* sections */
+
+section{
+
+padding:90px 10% 60px;
+
+border-bottom:
+
+1px solid rgba(255,255,255,.05);
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+section.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* hero */
+
+.hero{
+
+text-align:center;
+
+padding:120px 10% 70px;
+
+background:
+
+linear-gradient(
+135deg,
+#0f2027,
+#203a43,
+#2c5364);
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+color:#ccc;
+
+margin-top:8px;
+
+}
+
+/* cards */
+
+.card{
+
+background:
+
+rgba(255,255,255,.05);
+
+padding:22px;
+
+margin:15px 0;
+
+border-radius:14px;
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+transition:.4s;
+
+box-shadow:
+
+0 8px 25px rgba(0,0,0,.4);
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 15px 40px rgba(79,195,247,.3);
+
+}
+
+/* headings */
+
+h2{
+
+color:#4fc3f7;
+
+margin-bottom:20px;
+
+}
+
+/* grids */
+
+.skills{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(230px,1fr));
+
+gap:20px;
+
+}
+
+.grid2{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(380px,1fr));
+
+gap:20px;
+
+}
+
+.skill{
+
+background:
+
+rgba(255,255,255,.05);
+
+padding:18px;
+
+border-radius:10px;
+
+}
+
+.skill i{
+
+color:#4fc3f7;
+
+margin-bottom:8px;
+
+}
+
+/* progress */
+
+.bar{
+
+height:6px;
+
+background:#222;
+
+border-radius:10px;
+
+margin-top:8px;
+
+}
+
+.progress{
+
+height:100%;
+
+background:#4fc3f7;
+
+border-radius:10px;
+
+}
+
+/* lists */
+
+ul{
+
+padding-left:20px;
+
+}
+
+li{
+
+margin:6px 0;
+
+}
+
+/* tags */
+
+.tags span{
+
+display:inline-block;
+
+background:#1b2a40;
+
+padding:6px 12px;
+
+border-radius:20px;
+
+font-size:12px;
+
+margin:4px;
+
+}
+
+/* buttons */
+
+.btn{
+
+display:inline-block;
+
+background:#4fc3f7;
+
+padding:9px 18px;
+
+border-radius:20px;
+
+margin-top:12px;
+
+text-decoration:none;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#0288d1;
+
+}
+
+/* timeline */
+
+.timeline{
+
+border-left:
+
+2px solid #4fc3f7;
+
+padding-left:25px;
+
+}
+
+.timeline .card::before{
+
+content:"";
+
+position:absolute;
+
+width:14px;
+
+height:14px;
+
+background:#4fc3f7;
+
+border-radius:50%;
+
+left:-33px;
+
+top:28px;
+
+position:absolute;
+
+}
+
+/* footer */
+
+footer{
+
+text-align:center;
+
+padding:25px;
+
+background:black;
+
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+nav a{
+
+margin:6px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#about">Summary</a>
+<a href="#highlights">Highlights</a>
+<a href="#technical">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#certifications">Certifications</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+<section class="hero show" id="home">
+
+<h1>Praveen Banki</h1>
+
+<p>
+Software Engineer | DevOps | Cloud Enthusiast
+</p>
+
+<p>
+AWS | Python | Docker | Terraform | Git | Linux
+</p>
+
+<p>
+prawinbanki7@gmail.com
+</p>
+
+<a class="btn"
+href="resume.pdf"
+download>
+
+Download Resume
+
+</a>
+
+<div class="card">
+
+<p><b>Role:</b> Software / DevOps Engineer</p>
+
+<p><b>Location:</b> Hyderabad, Telangana, India</p>
+
+<p><b>Status:</b> Open to opportunities</p>
+
+<p><b>Primary Stack:</b> Python + AWS</p>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<h2>Professional Summary</h2>
+
+<div class="card">
+
+Aspiring Software Engineer experienced in AWS deployment,
+Docker containerization and Terraform infrastructure automation.
+Strong interest in DevOps engineering and scalable cloud systems.
+
+</div>
+
+</section>
+
+
+<section id="highlights">
+
+<h2>Highlights</h2>
+
+<div class="skills">
+
+<div class="skill">
+
+<h3>1+</h3>
+
+Internship Experience
+
+</div>
+
+<div class="skill">
+
+<h3>2</h3>
+
+Major Projects
+
+</div>
+
+<div class="skill">
+
+<h3>5+</h3>
+
+Technologies Used
+
+</div>
+
+<div class="skill">
+
+<h3>3</h3>
+
+Certifications
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="technical">
+
+<h2>Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+
+<i class="fa-solid fa-code"></i>
+
+Programming
+
+Python, Java, C
+
+<div class="bar">
+<div class="progress" style="width:80%"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<i class="fa-brands fa-aws"></i>
+
+AWS Cloud
+
+EC2, S3, VPC
+
+<div class="bar">
+<div class="progress" style="width:75%"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<i class="fa-solid fa-gears"></i>
+
+DevOps
+
+Git, Docker, Terraform
+
+<div class="bar">
+<div class="progress" style="width:70%"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<i class="fa-solid fa-database"></i>
+
+Database
+
+MySQL
+
+<div class="bar">
+<div class="progress" style="width:60%"></div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Tools Exposure</h2>
+
+<div class="card">
+
+<div class="tags">
+
+<span>AWS</span>
+<span>EC2</span>
+<span>S3</span>
+<span>VPC</span>
+<span>Docker</span>
+<span>Terraform</span>
+<span>Git</span>
+<span>Linux</span>
+<span>CI/CD</span>
+<span>GitHub Actions</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="grid2">
+
+<div class="card">
+
+<h3>AI Powered Alzheimer's Care</h3>
+
+<ul>
+
+<li>Facial recognition module</li>
+
+<li>Voice medicine reminder</li>
+
+<li>GPS tracking system</li>
+
+<li>Patient monitoring features</li>
+
+</ul>
+
+<div class="tags">
+
+<span>Python</span>
+<span>AI</span>
+<span>GPS</span>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>Cyber Security Financial Analysis</h3>
+
+<ul>
+
+<li>Security vulnerability analysis</li>
+
+<li>Financial data protection study</li>
+
+<li>Cyber security best practices</li>
+
+</ul>
+
+<div class="tags">
+
+<span>Security</span>
+<span>Finance</span>
+<span>Research</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="experience">
+
+<h2>Experience</h2>
+
+<div class="timeline">
+
+<div class="card">
+
+<h3>Nlite Asia Internship</h3>
+
+<ul>
+
+<li>AWS EC2 deployment</li>
+
+<li>Docker containerization</li>
+
+<li>Terraform provisioning</li>
+
+<li>CI/CD automation</li>
+
+<li>Git workflows</li>
+
+<li>Linux server configuration</li>
+
+<li>Application deployment testing</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="certifications">
+
+<h2>Certifications</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Cloud Computing – NPTEL</li>
+
+<li>Learning Python – edX</li>
+
+<li>Programming Python – Coursera</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="card">
+
+BTech CSE – GMR Institute of Technology
+
+<p>CGPA : 7.9</p>
+
+</div>
+
+<div class="card">
+
+Intermediate – Sri Prathibha Junior College
+
+<p>CGPA : 9.09</p>
+
+</div>
+
+<div class="card">
+
+SSC – Amara Jyothi High School
+
+<p>CGPA : 9.8</p>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="card">
+
+<p>
+
+<i class="fa-solid fa-envelope"></i>
+
+prawinbanki7@gmail.com
+
+</p>
+
+<p>
+
+<i class="fa-brands fa-github"></i>
+
+<a href="https://github.com/Praveen-banki">
+
+github.com/Praveen-banki
+
+</a>
+
+</p>
+
+<p>
+
+<i class="fa-brands fa-linkedin"></i>
+
+<a href="https://www.linkedin.com/in/banki-praveen-bb7910289">
+
+LinkedIn Profile
+
+</a>
+
+</p>
+
+<a class="btn"
+href="mailto:prawinbanki7@gmail.com">
+
+Contact Me
+
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Praveen Banki
+
+</footer>
+
+
+<script>
+
+const sections=
+document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(sec=>{
+
+let top=window.scrollY;
+
+let offset=sec.offsetTop-350;
+
+if(top>offset){
+
+sec.classList.add("show");
+
+}
+
+});
+
+});
+
+</script>
+
+
+</body>
+
+</html>
