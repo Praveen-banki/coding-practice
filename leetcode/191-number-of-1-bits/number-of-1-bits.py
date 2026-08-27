@@ -1,8 +1,9 @@
 class Solution:
     def hammingWeight(self, n: int) -> int:
-        m = bin(n)[2:]
-        c = 0
-        for i in m:
-            if i=='1':
-                c += 1
-        return c
+        count = 0
+
+        while n > 0:
+            count += n & 1
+            n >>= 1
+
+        return count
