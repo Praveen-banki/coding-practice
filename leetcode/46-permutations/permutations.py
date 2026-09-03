@@ -9,6 +9,6 @@ class Solution:
             rest = nums[:i] + nums[i+1:]
 
             for p in self.permute(rest):
-                ans.append(p + [nums[i]])
+                ans.append([nums[i]] + p)
 
         return ans
