@@ -1,8 +1,16 @@
 class Solution:
     def combine(self, n: int, k: int) -> list[list[int]]:
-        ans = [[]]
+        ans = []
 
-        for i in range(1, n + 1):
-            ans += [x + [i] for x in ans if len(x) < k]
+        def solve(start, path):
+            if len(path) == k:
+                ans.append(path[:])
+                return
 
-        return [x for x in ans if len(x) == k]
+            for i in range(start, n - (k - len(path)) + 2):
+                path.append(i)
+                solve(i + 1, path)
+                path.pop()
+
+        solve(1, [])
+        return ans
