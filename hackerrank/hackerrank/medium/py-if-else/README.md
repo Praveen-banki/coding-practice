@@ -32,7 +32,7 @@ Print `Weird` if the number is weird.  Otherwise, print `Not Weird`.
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-27T07:08:40.091Z  
+**Submitted:** 2026-09-27T07:11:23.796Z  
 
 ```py
 #!/bin/python3
@@ -47,15 +47,15 @@ import sys
 
 if __name__ == '__main__':
     n = int(input().strip())
-    if n % 2 == 1:
+
+    if n % 2 != 0:
+        print("Weird")
+    elif 2 <= n <= 5:
+        print("Not Weird")
+    elif 6 <= n <= 20:
         print("Weird")
     else:
-        if n < 6:
-            print("Not Weird")
-        elif n > 5 and n < 21:
-            print("Weird")
-        else:
-            print("Not Weird")
+        print("Not Weird")
 
 ```
 
